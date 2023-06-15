@@ -1,0 +1,22 @@
+:root {
+    /*COLORS*/
+    --bg-color-main: #060B10;
+
+
+    /*SPACING*/
+
+    /*BORDERS*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.bg-color-main {
+    background-color: var(--bg-color-main);
+    height: 100vh;
+}
+
