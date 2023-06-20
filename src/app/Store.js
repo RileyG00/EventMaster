@@ -1,27 +1,27 @@
 /*==================================================================================
 [0] Imports
 ==================================================================================*/
-//CSS
-import "../src/css/index.css";
-import "../src/css/pages.css";
-
-//JS
-import "./js/Helpers";
-
-//Pages
-import Home from "./components/pages/Home";
+import { configureStore } from "@reduxjs/toolkit";
+import BlobSliceXReducer from "./features/BlobSliceX";
 
 
 /*==================================================================================
-[?] Generate Final
+[1] Configuration
 ==================================================================================*/
-function App() {
+export const store = configureStore({
+    reducer: {
+        BlobSliceX: BlobSliceXReducer
+    }
+});
 
-    return (
-        <div>
-            <Home/>
-        </div>
-    )
-}
 
-export default App
+
+
+
+
+
+
+
+
+
+

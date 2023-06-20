@@ -1,10 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+/*==================================================================================
+[0] Imports
+==================================================================================*/
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import {store} from "./app/Store.js";
+import {Provider} from "react-redux";
 
 
+/*==================================================================================
+[1] Generate Final
+==================================================================================*/
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>
 )

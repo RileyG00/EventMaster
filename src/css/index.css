@@ -1,7 +1,9 @@
+/*==================================================================================
+[0] Initial Setup
+==================================================================================*/
 :root {
     /*COLORS*/
     --bg-color-main: #060B10;
-
 
     /*SPACING*/
 
@@ -15,8 +17,48 @@
 }
 
 
-.bg-color-main {
-    background-color: var(--bg-color-main);
-    height: 100vh;
+/*==================================================================================
+[1] Base Element Styling
+==================================================================================*/
+
+
+/*==================================================================================
+[2] Base Class Styling
+==================================================================================*/
+.blob {
+    background: linear-gradient(to right, aquamarine, mediumpurple);
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    animation: rotate360 20s infinite;
 }
+
+.blur {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    backdrop-filter: blur(75px);
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.block {
+    height: 500px;
+    width: 500px;
+    background-color: pink;
+    z-index: 5;
+}
+
 

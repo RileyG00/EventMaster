@@ -1,27 +1,22 @@
 /*==================================================================================
 [0] Imports
 ==================================================================================*/
-//CSS
-import "../src/css/index.css";
-import "../src/css/pages.css";
+import Blob from "../atoms/trinkets/Blob";
 
-//JS
-import "./js/Helpers";
-
-//Pages
-import Home from "./components/pages/Home";
 
 
 /*==================================================================================
 [?] Generate Final
 ==================================================================================*/
-function App() {
-
+const Home = () => {
     return (
-        <div>
-            <Home/>
+        <div className="return-container">
+            <Blob/>
+            <div className="block"></div>
         </div>
     )
 }
 
-export default App
+
+export default Home;
+
