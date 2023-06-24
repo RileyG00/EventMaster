@@ -1,8 +1,8 @@
 /*=======================================================================================
 [1] Imports
 =======================================================================================*/
-import NavLinkContainer from "../containers/NavLinkContainer";
-import GeneralTextSpan from "../../atoms/text/GeneralTextSpan"
+import NavLinkContainer from "./NavLinkContainer";
+import GeneralTextSpan from "../../atoms/text/GeneralTextSpan";
 
 /*=======================================================================================
 [2] Construct Final

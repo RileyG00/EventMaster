@@ -7,9 +7,15 @@ import { Link } from "react-router-dom";
 /*=======================================================================================
 [2] Contruct Return
 =======================================================================================*/
-const LinkOutButton = ({linkTo, btnText}) => {
+const LinkOutButton = ({linkTo, btnText, classList, btnAction}) => {
     return (
-        <Link to={linkTo}>{btnText}</Link>
+        <Link
+            className={classList}
+            to={linkTo}
+            onClick={btnAction}
+        >
+            {btnText}
+        </Link>
     )
 }
 

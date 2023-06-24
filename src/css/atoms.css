@@ -1,5 +1,17 @@
 /*==================================================================================
-[0] Navbar
+[0] General
+==================================================================================*/
+.btn {
+    color: var(--light-primary);
+    padding: .75rem 1.25rem;
+    border: none;
+    cursor: pointer;
+    background: var(--theme-color-primary);
+}
+
+
+/*==================================================================================
+[1] Navbar
 ==================================================================================*/
 .brand-text {
     font-size: 1.5rem;
@@ -23,3 +35,31 @@
     background-color: var(--light-primary);
     border-radius: 8px;
 }
+
+.nav-link {
+    padding: calc(var(--base-padding-margin)*.5);
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid var(--light-primary);
+    margin-bottom: -1px;
+}
+
+
+/*==================================================================================
+[2] Inputs
+==================================================================================*/
+.input-field {
+    border: none;
+    border-bottom: var(--border);
+    background-color: transparent;
+    height: var(--input-height);
+    width: 100%;
+    color: var(--light-primary);
+}
+
+.input-field::placeholder {
+    color: var(--light-placeholder);
+}
+
+

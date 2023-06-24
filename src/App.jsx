@@ -18,16 +18,18 @@ import "./js/Helpers";
 
 //Pages
 import Home from "./components/pages/Home";
+import Login from "./components/pages/Login";
 
 
 /*==================================================================================
-[?] Generate Final
+[1] Generate Final
 ==================================================================================*/
 function App() {
     return (
         <Router>
             <Routes>
                 <Route path="/" element={<Home/>}/>
+                <Route path="/login" element={<Login/>}/>
             </Routes>
         </Router>
     )

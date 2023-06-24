@@ -1,30 +1,36 @@
 /*==================================================================================
 [0] Imports
 ==================================================================================*/
-import {createSlice} from "@reduxjs/toolkit";
-
+import { createSlice } from "@reduxjs/toolkit";
+import { getCookie } from "../../js/Helpers";
 
 /*==================================================================================
-[1] Create Initial State
+[1] Create Inital State
 ==================================================================================*/
+let isLoggedIn = getCookie("userid");
+
+isLoggedIn = isLoggedIn ? true : false;
+
 const initialState = {
-    isActive: false
+    isLoggedIn: isLoggedIn
 }
 
 
 /*==================================================================================
 [2] Export Final
 ==================================================================================*/
-export const hamBurgerState = createSlice({
-    name: "hamBurgerState",
+export const loginStatus = createSlice({
+    name: "loginStatus",
     initialState,
     reducers: {
-        toggleState: (state) => {
-            state.isActive = !state.isActive;
+        loginUser: (state) => {
+            state.isLoggedIn = true
+        },
+        signoutUser: (state) => {
+            state.isLoggedIn = false
         }
     }
 });
 
-
-export const {toggleState} = hamBurgerState.actions;
-export default hamBurgerState.reducer;
+export const {toggleLoginStatus} = loginStatus.actions;
+export default loginStatus.reducer;
