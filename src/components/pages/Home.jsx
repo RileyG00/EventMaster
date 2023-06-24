@@ -1,7 +1,7 @@
 /*==================================================================================
 [0] Imports
 ==================================================================================*/
-import Blob from "../atoms/trinkets/Blob";
+import TopNavBar from "../organisms/navigation/TopNavbar";
 
 
 
@@ -10,9 +10,8 @@ import Blob from "../atoms/trinkets/Blob";
 ==================================================================================*/
 const Home = () => {
     return (
-        <div className="return-container">
-            <Blob/>
-            <div className="block"></div>
+        <div className="return-container bg-one">
+            <TopNavBar/>
         </div>
     )
 }

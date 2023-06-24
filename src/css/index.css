@@ -1,11 +1,21 @@
-/*==================================================================================
+/*=======================================================================================
 [0] Initial Setup
-==================================================================================*/
+=======================================================================================*/
+/* Headers */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+/* General Text */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+
 :root {
     /*COLORS*/
-    --bg-color-main: #060B10;
+    --dark-primary: rgb(40,40,40);
+    --light-primary: rgb(235,235,235);
 
     /*SPACING*/
+    --base-padding-margin: 16px;
+    --base-page-inset: 5%;
 
     /*BORDERS*/
 }
@@ -17,48 +27,59 @@
 }
 
 
-/*==================================================================================
-[1] Base Element Styling
-==================================================================================*/
-
-
-/*==================================================================================
-[2] Base Class Styling
-==================================================================================*/
-.blob {
-    background: linear-gradient(to right, aquamarine, mediumpurple);
-    height: 200px;
-    width: 300px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    animation: rotate360 20s infinite;
+/*=======================================================================================
+[1] General Element Styling
+=======================================================================================*/
+body {
+    font-family:'Poppins';
 }
 
-.blur {
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-    backdrop-filter: blur(75px);
+h1, h2, h3, h4, h5, h6 {
+    font-family:'Montserrat';   
 }
 
-@keyframes rotate360 {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+span {
+    color: var(--light-primary);
 }
 
-.block {
-    height: 500px;
-    width: 500px;
-    background-color: pink;
-    z-index: 5;
+a:any-link {
+    color: var(--light-primary);
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/*=======================================================================================
+[2] General Class Styling
+=======================================================================================*/
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.gap-05 {
+    gap: calc(var(--base-padding-margin)*.5);
+}
+
+.gap-1 {
+    gap: var(--base-padding-margin);
+}
+
+.gap-2 {
+    gap: calc(var(--base-padding-margin)*2);
+}
+
+.glassmorphism {
+    backdrop-filter: blur(8px) saturate(200%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+    background-color: rgba(200, 200, 200, 0.1);
 }
 
 

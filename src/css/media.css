@@ -1,0 +1,27 @@
+/*==================================================================================
+[0] Navbar
+==================================================================================*/
+@media only screen and (max-width: 600px) {
+    .nav-main-controller {
+        flex-direction: column;
+    }
+
+    .navbar-links:not(.active) {
+        display: none;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(var(--base-padding-margin)*2);
+        margin-top: var(--base-padding-margin);
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    
+}
+
