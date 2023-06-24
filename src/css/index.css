@@ -84,6 +84,8 @@ li {
 [2] General
 =======================================================================================*/
 .glassmorphism {
+    -webkit-backdrop-filter: blur(8px);
+    -o-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     background: var(--dark-primary-o);
 }
