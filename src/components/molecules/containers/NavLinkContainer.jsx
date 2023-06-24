@@ -27,7 +27,7 @@ const NavLinkContainer = () => {
         );
     } else {
         navLinks.push(
-            {text: "Menu", linkLocation: "/menu", onClickAction: () => dispatch(toggleState())},
+            {text: "Menu Manager", linkLocation: "/menu-manager", onClickAction: () => dispatch(toggleState())},
             {text: "Event Manager", linkLocation: "/event-manager", onClickAction: () => dispatch(toggleState())},
             {text: "Account", linkLocation: "/account", onClickAction: () => dispatch(toggleState())},
             {text: "Signout", linkLocation: "/signout", onClickAction: () => dispatch(toggleState())},

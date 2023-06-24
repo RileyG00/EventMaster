@@ -16,7 +16,10 @@ const LoginInputTitle = () => {
     return (
         <div className="width100 height100 flex-column flex-jc-sb flex-grow">
             <div className="flex-column gap-3">
-                <HeaderSubText/>
+                <HeaderSubText
+                    headerText="Welcome to Event Master"
+                    subText="Log in to create, edit, and review events and menu items"
+                />
                 <LoginInputContainer/>
             </div>
             <SubmitBtn classList="btn btn-action border-radius" text="Login"/>

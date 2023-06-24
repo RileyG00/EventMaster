@@ -19,6 +19,10 @@ import "./js/Helpers";
 //Pages
 import Home from "./components/pages/Home";
 import Login from "./components/pages/Login";
+import Signout from "./components/pages/Signout";
+import Account from "./components/pages/Account";
+import EventManager from "./components/pages/EventManager";
+import MenuManager from "./components/pages/MenuManager";
 
 
 /*==================================================================================
@@ -30,6 +34,11 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/login" element={<Login/>}/>
+                <Route path="/signout" element={<Signout/>}/>
+                <Route path="/account" element={<Account/>}/>
+                <Route path="/event-manager" element={<EventManager/>}/>
+                <Route path="/menu-manager" element={<MenuManager/>}/>
+                <Route path="/*" element={<Home/>}/>
             </Routes>
         </Router>
     )

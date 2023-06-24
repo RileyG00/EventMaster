@@ -1,22 +1,22 @@
 /*==================================================================================
 [0] Imports
 ==================================================================================*/
-import LoginInputTitle from "./LoginInputTitle";
+import TopNavBar from "../organisms/navigation/TopNavbar";
 
 
 /*==================================================================================
 [1] Generate Final
 ==================================================================================*/
-const LoginForm = () => {
+const MenuManager = () => {
     /*==============================================================================
     [1] Return Final
     ==============================================================================*/
     return (
-        <form id="login-form" className="general-container flex-column flex-align-center glassmorphism border-radius">
-            <LoginInputTitle/>
-        </form>
+        <div className="return-container bg-one">
+            <TopNavBar/>
+        </div>
     )
 }
 
 
-export default LoginForm;
+export default MenuManager;

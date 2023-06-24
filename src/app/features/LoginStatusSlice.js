@@ -4,6 +4,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getCookie } from "../../js/Helpers";
 
+
 /*==================================================================================
 [1] Create Inital State
 ==================================================================================*/
@@ -26,11 +27,11 @@ export const loginStatus = createSlice({
         loginUser: (state) => {
             state.isLoggedIn = true
         },
-        signoutUser: (state) => {
+        logoutUser: (state) => {
             state.isLoggedIn = false
         }
     }
 });
 
-export const {toggleLoginStatus} = loginStatus.actions;
+export const {loginUser, logoutUser} = loginStatus.actions;
 export default loginStatus.reducer;

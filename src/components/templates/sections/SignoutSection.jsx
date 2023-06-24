@@ -1,22 +1,22 @@
 /*==================================================================================
 [0] Imports
 ==================================================================================*/
-import LoginInputTitle from "./LoginInputTitle";
+import SignoutContainer from "../../organisms/containers/SignoutContainer";
 
 
 /*==================================================================================
 [1] Generate Final
 ==================================================================================*/
-const LoginForm = () => {
+const SignoutSection = () => {
     /*==============================================================================
     [1] Return Final
     ==============================================================================*/
     return (
-        <form id="login-form" className="general-container flex-column flex-align-center glassmorphism border-radius">
-            <LoginInputTitle/>
-        </form>
+        <section className="flex-row flex-align-center flex-jc-center section-max-width">
+            <SignoutContainer/>
+        </section>
     )
 }
 
 
-export default LoginForm;
+export default SignoutSection;
