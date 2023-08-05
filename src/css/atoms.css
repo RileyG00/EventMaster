@@ -3,10 +3,11 @@
 ==================================================================================*/
 .btn {
     color: var(--light-primary);
-    padding: .75rem 1.25rem;
+    padding: .5rem 1rem;
     border: none;
     cursor: pointer;
     background: var(--theme-color-primary);
+    text-align: center;
 }
 
 
