@@ -1,66 +1,48 @@
 /*==================================================================================
-[0] General
+[0] Buttons
 ==================================================================================*/
 .btn {
-    color: var(--light-primary);
-    padding: .5rem 1rem;
-    border: none;
+    padding: .5rem 1.25rem;
+    border-radius: var(--border-radius); 
     cursor: pointer;
-    background: var(--theme-color-primary);
-    text-align: center;
-}
-
-
-/*==================================================================================
-[1] Navbar
-==================================================================================*/
-.brand-text {
-    font-size: 1.5rem;
-}
-
-.hamburger-menu {
-    flex-direction: column;
-    gap: 4px;
-    border: none;
-    position: absolute;
-    top: 41.5px;
-    transform: translateY(-50%);
-    right: var(--base-page-inset);
+    text-decoration: none;
     background-color: transparent;
-    display: none;
+    border: none;
+    font-size: 1rem;
+    height: var(--button-height);
 }
 
-.hamburger-bar {
-    height: 3px;
-    width: 28px;
-    background-color: var(--light-primary);
-    border-radius: 8px;
+.btn-action {
+    background-color: var(--color-tertiary);
+    box-shadow: var(--box-shadow-light);
 }
 
-.nav-link {
-    padding: calc(var(--base-padding-margin)*.5);
-}
-
-.nav-link:hover {
-    border-bottom: 1px solid var(--light-primary);
-    margin-bottom: -1px;
+.btn-action:hover {
+    filter: brightness(.85);
+    transition-duration: var(--transition-delay);
 }
 
 
 /*==================================================================================
-[2] Inputs
+[1] Inputs
 ==================================================================================*/
 .input-field {
-    border: none;
-    border-bottom: var(--border);
-    background-color: transparent;
     height: var(--input-height);
-    width: 100%;
-    color: var(--light-primary);
+    border: none;
+    padding-left: var(--base-padding-margin);
+    background: transparent;
+    border-bottom: var(--border);
+    font-size: 1rem;
+    color: var(--color-font);
+}
+
+.input-length-1 {
+    width: 300px;
 }
 
 .input-field::placeholder {
-    color: var(--light-placeholder);
+    font-size: .85em;
+    color: var(--color-font-hover);
 }
 
 

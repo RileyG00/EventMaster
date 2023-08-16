@@ -1,32 +1,34 @@
 /*==================================================================================
 [0] Imports
 ==================================================================================*/
-import Input from "../../atoms/inputs/Input";
+import NavBar from "../molecules/navigation/NavBar";
+import LoginForm from "../organisms/forms/LoginForm";
+
 
 /*==================================================================================
 [1] Generate Final
 ==================================================================================*/
-const LoginInputContainer = () => {
+const Recipes = () => {
     /*==============================================================================
-    [1] Return Final
+    [1] Constants
+    ==============================================================================*/
+    
+
+
+    /*==============================================================================
+    [2] Return Final
     ==============================================================================*/
     return (
-        <div className="input-container flex-column gap-1">
-            <Input
-                inputType="text"
-                inputID="login-username"
-                labelText="Username"
-                placeholder="Username"
-            />
-            <Input
-                inputType="password"
-                inputID="login-password"
-                labelText="Password"
-                placeholder="Password"
-            />
+        <div className="page-container">
+            <NavBar/>
+            <LoginForm/>
         </div>
     )
 }
 
 
-export default LoginInputContainer;
+export default Recipes;
+
+
+
+

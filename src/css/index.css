@@ -10,32 +10,45 @@
 
 :root {
     /*COLORS*/
-    --dark-primary: rgb(40,40,40);
-    --dark-primary-o: rgba(40,40,40,.25);
-    --light-primary: rgb(235,235,235);
-    --light-btn-hover: rgba(235,235,235,.8);
-    --light-placeholder: rgb(180,180,180);
+    --color-primary: rgb(26, 26, 26);
+    --color-primary-o: rgba(26,26,26,.25);
+    --color-secondary: rgb(52, 82, 100);
+    --color-tertiary: rgb(0, 128, 128);
+    --color-light: rgb(240,240,240);
+    --color-font: rgb(240,240,240);
+    --color-font-hover: rgb(200,200,200);
+    --color-input: rgb(180,180,180);
+    --bg-gradiant: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    --box-shadow: 0 2px 16px 0px var(--color-primary);
 
-    /*THEME*/
-    --theme-color-primary: #0CBABA;
+    /*TRINCKETS*/
+    --box-shadow: 0 2px 16px 0px var(--color-primary);
+    --box-shadow-light: 0 2px 12px 0px var(--color-primary-o);
+
+    /*ANIMATION*/
+    --transition-delay: 85ms;
 
     /*SPACING*/
     --base-padding-margin: 16px;
     --base-page-inset: 5%;
 
     /*BORDERS*/
-    --border: 1px solid rgb(60,60,60);
+    --border-color-dark: rgb(70,70,70);
+    --border: 1px solid var(--border-color-dark);
+    --border-color-light: rgb(200,200,200);
+    --border-light: 1px solid var(--border-color-light);
     --border-radius: 6px;
 
     /*SIZES*/
-    --input-height: 44px;
+    --button-height: 44px;
+    --input-height: 38px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--light-primary);
+    color: var(--color-font);
     letter-spacing: 1.4px;
     font-family: "Poppins";
 }
@@ -46,39 +59,19 @@
 =======================================================================================*/
 body {
     font-family:'Poppins';
-    
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family:'Montserrat';
 }
 
-h1 {
-    font-size: 1.75rem;
-}
-
-a,p,span,input,button {
-    font-size: 1rem;
-}
-
-label {
-    font-size: .85em;
-}
-
-input::placeholder {
-    font-size: .85em;
-}
-
 a:any-link {
-    text-decoration: none;
+    color: var(--color-font);
 }
 
 a:hover {
-    color: var(--light-btn-hover);
-}
-
-li {
-    list-style: none;
+    color: var(--color-font-hover);
+    border-bottom: var(--border-light);
 }
 
 
@@ -89,56 +82,50 @@ li {
     -webkit-backdrop-filter: blur(8px);
     -o-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    background: var(--dark-primary-o);
+    background: var(--color-primary-o);
 }
 
 .border-radius {
     border-radius: var(--border-radius);
 }
 
-.width100 {
-    width: 100%;
+
+/*=======================================================================================
+[3] Sizing
+=======================================================================================*/
+.height-100 {
+    height: 100%;
 }
 
-.height100 {
+.width-100 {
     width: 100%;
-}
-
-.center-text {
-    width: 100%;
-    text-align: center;
 }
 
 
 /*=======================================================================================
-[3] Flex Box Styling
+[4] Flex Box
 =======================================================================================*/
-.flex-row {
+.flex-box-row {
     display: flex;
     flex-direction: row;
 }
 
-.flex-column {
+.flex-box-column {
     display: flex;
     flex-direction: column;
-}
-
-.flex-align-center {
-    align-items: center;
 }
 
 .flex-jc-center {
     justify-content: center;
 }
 
-.flex-jc-sb {
-    justify-content: space-between;
+.flex-ai-center {
+    align-items: center;
 }
 
 .flex-grow {
     flex-grow: 1;
 }
-
 
 .gap-05 {
     gap: calc(var(--base-padding-margin)*.5);
@@ -155,6 +142,49 @@ li {
 .gap-3 {
     gap: calc(var(--base-padding-margin)*3);
 }
+
+.gap-4 {
+    gap: calc(var(--base-padding-margin)*4);
+}
+
+.gap-5 {
+    gap: calc(var(--base-padding-margin)*5);
+}
+
+
+/*=======================================================================================
+[5] Fonts
+=======================================================================================*/
+.text-small {
+    font-size: .85em;
+}
+
+.text-big {
+    font-size: 1.15em;
+}
+
+
+/*=======================================================================================
+[6] Spacing
+=======================================================================================*/
+.margin-bottom-05 {
+    margin-bottom: calc(var(--base-padding-margin)*.5);
+}
+
+.margin-bottom-1 {
+    margin-bottom: var(--base-padding-margin);
+}
+
+.margin-bottom-2 {
+    margin-bottom: calc(var(--base-padding-margin)*2);
+}
+
+.margin-bottom-3 {
+    margin-bottom: calc(var(--base-padding-margin)*3);
+}
+
+
+
 
 
 

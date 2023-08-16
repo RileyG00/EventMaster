@@ -2,8 +2,7 @@
 [0] Imports
 ==================================================================================*/
 import { configureStore } from "@reduxjs/toolkit";
-import HamburgerSlice from "./features/HamburgerSlice";
-import LoginStatusSlice from "./features/LoginStatusSlice";
+import LoginStatus from "./Slices/Login";
 
 /*==================================================================================
 [1] Configuration
@@ -11,8 +10,7 @@ import LoginStatusSlice from "./features/LoginStatusSlice";
 export const store = configureStore(
     {
         reducer: {
-            hamburgerState: HamburgerSlice,
-            LoginState: LoginStatusSlice
+            LoginStatus: LoginStatus
         }
     }
 );

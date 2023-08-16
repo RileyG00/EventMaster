@@ -4,7 +4,7 @@
 export function setCookie(key, value, expiresWhen) {
     let date = new Date();
     date.setTime(date.getTime() + (expiresWhen*60*60*1000));
-    let expires = "expires=" + date.toUTCString();
+    let expires = "expires=" + date.toString();
     
     document.cookie = key + "=" + value + ";" + expires + ";path=/";
 }

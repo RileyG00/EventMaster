@@ -3,6 +3,7 @@
 ==================================================================================*/
 //General
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 //CSS
 import "../src/css/index.css";
@@ -17,12 +18,9 @@ import "../src/css/media.css";
 import "./js/Helpers";
 
 //Pages
-import Home from "./components/pages/Home";
+import Recipes from "./components/pages/Recipes";
 import Login from "./components/pages/Login";
-import Signout from "./components/pages/Signout";
-import Account from "./components/pages/Account";
-import EventManager from "./components/pages/EventManager";
-import MenuManager from "./components/pages/MenuManager";
+
 
 
 /*==================================================================================
@@ -32,13 +30,9 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Home/>}/>
+                <Route path="/" element={<Recipes/>}/>
+                <Route path="/recipes" element={<Recipes/>}/>
                 <Route path="/login" element={<Login/>}/>
-                <Route path="/signout" element={<Signout/>}/>
-                <Route path="/account" element={<Account/>}/>
-                <Route path="/event-manager" element={<EventManager/>}/>
-                <Route path="/menu-manager" element={<MenuManager/>}/>
-                <Route path="/*" element={<Home/>}/>
             </Routes>
         </Router>
     )
